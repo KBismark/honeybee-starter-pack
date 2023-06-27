@@ -10,8 +10,8 @@
     "honeybee-client": ">=0.0.1"
   },
   "devDependencies": {
-    "honeybee-compiler":">=0.1.0",
-    "import-for-web": ">=0.0.2"
+    "honeybee-compiler":">=0.2.0",
+    "import-for-web": ">=0.1.0"
   },
   "license": "MIT"
 }

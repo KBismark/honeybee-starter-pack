@@ -82,16 +82,18 @@ const BeeLoader = (space) => {
         if (!env_ready) {
             BeeLoader(30);
         } else {
+            const shiftToCenter = getSpace(24)
             process.stdout.moveCursor(0, -1)
             process.stdout.clearLine(1);//🐝
             console.log(`${colors.text('✔  ').greenColor().bold().get()}${colors.text(`Successful`).bold().get()}`);
             console.log(`${colors.text('>> ').bold().yellowColor().get()}${colors.text('Installing dependencies...').bold().blueColor().get()}`)
-            execSync(`cd ${projectName} && npm install`, { stdio: 'inherit' });
-            console.log(`\n\t\t${colors.text(`🐝 Welcome Genius! 🐝\n`).greenColor().bold().get()}`);
-            console.log(`${colors.text(`Your project is ready. Get yourself busy and produce some honey.`).whiteColor().get()}`);
-            console.log(`${colors.text('\nChange to project directory:').whiteColor().bold().get()} ${colors.text(`cd ${projectName}`).cyanColor().get()}`);
-            console.log(`${colors.text('Start dev server:').whiteColor().bold().get()} ${colors.text(`npm start`).cyanColor().get()}`);
-            console.log(`\n\t\t${colors.text(`  Happy coding!`).greenColor().bold().get()}`);
+            execSync(`cd ${projectName} && npm install && git init`, { stdio: 'inherit' });
+            console.log(`\n\t\t${colors.text(`${shiftToCenter}🐝 Welcome Genius! 🐝\n`).greenColor().bold().get()}`);
+            console.log(`${colors.text(`${shiftToCenter}Your project is ready. Get yourself busy and produce some honey.`).whiteColor().get()}`);
+            console.log(`\t\t${shiftToCenter}${colors.text(`  Happy coding!`).greenColor().bold().get()}`);
+            console.log(`${colors.text('>> ').bold().yellowColor().get()}${colors.text('\n\n\nChange to project directory:').whiteColor().bold().get()} ${colors.text(`cd ${projectName}`).cyanColor().get()}`);
+            console.log(`${colors.text('>> ').bold().yellowColor().get()}${colors.text('Start dev server:').whiteColor().bold().get()} ${colors.text(`npm start`).cyanColor().get()}`);
+            
             process.exit(0);
         }
         
@@ -105,7 +107,10 @@ console.log(`${colors.text('>> ').bold().yellowColor().get()}${colors.text(' Set
 console.log('...');
 BeeLoader(30);
 moveDirectory(path.join(dirname, '/starter'), projectDir, function () {
-    env_ready = true;
+    fs.writeFile(path.join(projectDir, '/.gitignore'), 'node_modules', (err) => {
+        if (err) { }
+        env_ready = true;
+    })
 });
 
 
