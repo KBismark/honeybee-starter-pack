@@ -1,0 +1,17 @@
+{
+  "name": "honey-bee-app",
+  "version": "1.0.0",
+  "main": "src/modules/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/honeybee-compiler/index.js"
+  },
+  "dependencies": {
+    "honeybee-client": ">=0.0.1"
+  },
+  "devDependencies": {
+    "honeybee-compiler":">=0.1.0",
+    "import-for-web": ">=0.0.2"
+  },
+  "license": "MIT"
+}

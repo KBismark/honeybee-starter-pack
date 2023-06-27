@@ -1,0 +1,28 @@
+{
+    "name": "create-honebee-project",
+    "version": "0.0.1",
+    "main": "index.js",
+    "type": "commonjs",
+    "bin":"./bin/cli.js",
+    "scripts": {
+      "test":"echo \"Error: no test specified\" && exit 1",
+      "postversion": "git push && git push --tags"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/KBismark/honeybee-starter-pack.git"
+    },
+    "keywords": [
+      "honey-bee",
+      "honeybeeJS",
+      "bee-compiler",
+      "honeybeeJS-compiler",
+      "import-for-web",
+      "i4w",
+      "javascript"
+    ],
+    "description": "A project starter pack for honeybeeJS.",
+    "author": "Yamoah Bismark <bismarkkwabenayamoah@gmail.com>",
+    "license": "MIT"
+  }
+  
