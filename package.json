@@ -1,5 +1,5 @@
 {
-    "name": "create-honebee-project",
+    "name": "create-honeybee-project",
     "version": "0.0.1",
     "main": "index.js",
     "type": "commonjs",
@@ -13,10 +13,11 @@
       "url": "git+https://github.com/KBismark/honeybee-starter-pack.git"
     },
     "keywords": [
-      "honey-bee",
+      "honeybee",
       "honeybeeJS",
-      "bee-compiler",
-      "honeybeeJS-compiler",
+      "honeybee-client",
+      "honeybee-server",
+      "honeybee-compiler",
       "import-for-web",
       "i4w",
       "javascript"
