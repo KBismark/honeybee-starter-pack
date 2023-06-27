@@ -1,29 +1,28 @@
 {
     "name": "create-honeybee-project",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "main": "index.js",
     "type": "commonjs",
-    "bin":"./bin/cli.js",
+    "bin": "./bin/cli.js",
     "scripts": {
-      "test":"echo \"Error: no test specified\" && exit 1",
-      "postversion": "git push && git push --tags && npm publish"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "postversion": "git push && git push --tags && npm publish"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/KBismark/honeybee-starter-pack.git"
+        "type": "git",
+        "url": "git+https://github.com/KBismark/honeybee-starter-pack.git"
     },
     "keywords": [
-      "honeybee",
-      "honeybeeJS",
-      "honeybee-client",
-      "honeybee-server",
-      "honeybee-compiler",
-      "import-for-web",
-      "i4w",
-      "javascript"
+        "honeybee",
+        "honeybeeJS",
+        "honeybee-client",
+        "honeybee-server",
+        "honeybee-compiler",
+        "import-for-web",
+        "i4w",
+        "javascript"
     ],
     "description": "A project starter pack for honeybeeJS.",
     "author": "Yamoah Bismark <bismarkkwabenayamoah@gmail.com>",
     "license": "MIT"
-  }
-  
+}
